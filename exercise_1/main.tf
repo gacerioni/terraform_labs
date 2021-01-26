@@ -14,7 +14,7 @@ resource "aws_s3_bucket" "tf-root-module-bucket" {
   }
   
   tags = {
-    Name        = var.s3_bucket_name}
+    Name        = var.s3_bucket_name
     Environment = var.tag_env
   }
  }
