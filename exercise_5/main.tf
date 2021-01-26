@@ -1,19 +1,19 @@
 provider "aws" {
-  region     = "${var.region}"
-  access_key = "${var.access_key}"
-  secret_key = "${var.secret_key}"
+  region     = var.region
+  access_key = var.access_key
+  secret_key = var.secret_key
 }
 
 terraform {
   backend "s3" {
-  bucket = "rc-tf-remote-state-bucket"
+  bucket = "gabs-remote-tf-state-bucket"
   key = "terraform.tfstate"
-  region = "us-east-1"
+  region = "us-east-2"
   }
 }
 
 resource "aws_ecs_cluster" "ecs-cluster-1" {
-    name = "${var.ecs-cluster-1}"
+    name = var.ecs-cluster-1
 
 }
 
