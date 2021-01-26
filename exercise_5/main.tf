@@ -7,7 +7,7 @@ provider "aws" {
 terraform {
   backend "s3" {
   bucket = "gabs-remote-tf-state-bucket"
-  key = "terraform.tfstate"
+  key = "terraform-lab6.tfstate"
   region = "us-east-2"
   }
 }
