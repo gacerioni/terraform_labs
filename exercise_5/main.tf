@@ -41,7 +41,7 @@ resource "aws_ecs_cluster" "ecs-cluster-1" {
     }
     security_groups             = ["sg-0a8ef27e8b284caa0"]
     associate_public_ip_address = "true"
-    key_name                    = "harness-delegate"
+    key_name                    = "cs_gabs_keypair"
     user_data                   = <<EOF
                                   #!/bin/bash
                                   echo ECS_CLUSTER=${var.ecs-cluster-1} >> /etc/ecs/ecs.config
