@@ -25,6 +25,11 @@ resource "aws_ecs_cluster" "ecs-cluster-1" {
     vpc_zone_identifier         = ["subnet-921d17fa","subnet-51a8e82b"]
     launch_configuration        = aws_launch_configuration.ecs-launch-configuration-1.name
     health_check_type           = "ELB"
+    tag {
+      key                 = "Name"
+      value               = "Gabs - ECS - EC2 Nodes - Lab 6"
+      propagate_at_launch = true
+    }   
   }
   resource "aws_launch_configuration" "ecs-launch-configuration-1" {
     name                        = "ecs-lb-${var.ecs-cluster-1}"
