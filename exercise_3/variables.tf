@@ -10,13 +10,13 @@ variable "region" {
 variable "s3_bucket_region" {
   type        = "string"
   description = "Region where S3 bucket will be created used to store remote state file"
-  default     = "us-east-1"
+  default     = "us-east-2"
   }
 
 variable "s3_bucket_name" {
   type        = "string"
   description = "Name of the S3 bucket to be created used to store the remote state file"
-  default     = "rc-tf-bucket-training-exercise-3"
+  default     = "rc-tf-bucket-training-exercise-3-gabs"
   }
 
 variable "tag_env" {
