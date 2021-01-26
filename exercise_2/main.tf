@@ -8,7 +8,7 @@ terraform {
    backend "s3" {
    bucket = "gabs-remote-tf-state-bucket"
    key = "terraform.tfstate"
-   region = "us-east-1"
+   region = "us-east-2"
   }
 }
 
