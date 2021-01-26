@@ -23,7 +23,7 @@ resource "aws_ecs_cluster" "ecs-cluster-1" {
     min_size                    = "1"
     desired_capacity            = var.capacity
     vpc_zone_identifier         = ["subnet-921d17fa","subnet-51a8e82b"]
-    launch_configuration        = "${aws_launch_configuration.ecs-launch-configuration-1.name}"
+    launch_configuration        = aws_launch_configuration.ecs-launch-configuration-1.name
     health_check_type           = "ELB"
   }
   resource "aws_launch_configuration" "ecs-launch-configuration-1" {
